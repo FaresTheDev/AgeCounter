@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="inputs">
+          <div class="day-input">
+            <label id="day-label" for="day">DAY</label>
+            <input id="day-input" type="number" placeholder="DD" required />
+            <span id="day-error" hidden></span>
+          </div>
+
+          <div class="month-input">
+            <label id="month-label" for="month">MONTH</label>
+            <input id="month-input" type="number" placeholder="MM" required />
+            <span id="month-error" hidden></span>
+          </div>
+
+          <div class="year-input">
+            <label id="year-label" for="year">YEAR</label>
+            <input id="year-input" type="number" placeholder="YYYY" required />
+            <span id="year-error" hidden></span>
+          </div>
+        </div>
+
+        <div class="button-hr-div">
+          <hr />
+          <button id="submit-button" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="46"
+              height="44"
+              viewBox="0 0 46 44"
+            >
+              <g fill="none" stroke="white" stroke-width="2">
+                <path
+                  d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <!-- 
+    add animation to numbers
+
+    add animation to button 
+    
+  -->
+      <div class="age-container">
+        <h1 id="years">
+          <span class="age-span">--</span>
+          years
+        </h1>
+
+        <h1 id="months">
+          <span class="age-span">--</span>
+          months
+        </h1>
+
+        <h1 id="days">
+          <span class="age-span">--</span>
+          days
+        </h1>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://twitter.com/FaresTheDev" target="_blank">FaresTheDev</a
+        >.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

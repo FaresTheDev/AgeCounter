@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap");
+
+:root {
+  /* primary colors */
+  --purole: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+
+  /* neutral colors */
+  --off-white: hsl(0, 0%, 94%);
+  --light-gray: hsl(0, 0%, 86%);
+  --smokey-gray: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+
+  /* Typography */
+  --font-family: "Poppins", sans-serif;
+  --regular: 400;
+  --bold: 700;
+  --extra-bold: 800;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--light-gray);
+}
+
+.container {
+  padding: 25px;
+  background-color: white;
+  border-radius: 20px 20px 100px 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs {
+  display: flex;
+  margin: 0;
+  margin-right: 300px;
+}
+
+.day-input,
+.month-input,
+.year-input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+.day-input > label,
+.month-input > label,
+.year-input > label {
+  font-weight: var(--bold);
+  color: var(--smokey-gray);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.day-input > input,
+.month-input > input,
+.year-input > input {
+  height: 50px;
+  width: 200px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  color: var(--smokey-gray);
+  font-size: 20px;
+  font-weight: var(--extra-bold);
+}
+
+.day-input > input::placeholder,
+.month-input > input::placeholder,
+.year-input > input::placeholder {
+  padding: 10px;
+  color: var(--smokey-gray);
+  font-size: 20px;
+  font-weight: var(--extra-bold);
+}
+
+.button-hr-div > button {
+  display: inline-block;
+  padding: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--purole);
+}
+
+hr {
+  display: inline-block;
+  height: 2px;
+  width: 700px;
+  border: none;
+  background-color: var(--light-gray);
+}
+
+#years,
+#months,
+#days,
+.age-span {
+  font-size: 70px;
+  font-weight: var(--extra-bold);
+  color: var(--off-black);
+  font-style: italic;
+}
+
+.age-span {
+  color: var(--purole);
+}
+
+.error {
+  border-color: var(--light-red) !important;
+  color: var(--light-red) !important;
+}
+
+#day-error,
+#month-error,
+#year-error {
+  color: var(--light-red);
+}
+
+/* media querry */
+@media screen and (min-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .inputs {
+    margin-right: 0px;
+  }
+
+  .day-input,
+  .month-input,
+  .year-input {
+    margin: 5px;
+  }
+
+  .day-input > label,
+  .month-input > label,
+  .year-input > label {
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+
+  .day-input > input,
+  .month-input > input,
+  .year-input > input {
+    width: 80px;
+  }
+
+  .button-hr-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+  }
+
+  .button-hr-div > button {
+    position: relative;
+    left: -200px;
+    display: inline-block;
+    padding: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--purole);
+  }
+
+  hr {
+    margin-left: 100px;
+    height: 2px;
+    width: 300px;
+    border: none;
+    background-color: var(--light-gray);
+  }
+
+  #years,
+  #months,
+  #days,
+  .age-span {
+    font-size: 50px;
+  }
+
+  #day-error,
+  #month-error,
+  #year-error {
+    width: 80px;
+    color: var(--light-red);
+    font-size: 10px;
+  }
+}
