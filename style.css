@@ -135,7 +135,7 @@ hr {
 }
 
 /* media querry */
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   .container {
     display: flex;
     flex-direction: column;
